@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgba(62, 143, 12, 0.8);
-  --secondary-color: rgba(39, 111, 17, 0.353);
+  --secondary-color: rgba(39, 111, 17, 1);
   --hover-color1: rgba(25, 147, 18, 0.782);
   --hover-color2: rgba(10, 85, 33, 0.304);
   --border-color: rgba(6, 80, 2, 0.585);
@@ -19,11 +19,16 @@ body {
 }
 
 #navbar {
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  height: 40px;
+  margin-top: 10px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-color);
+  position: fixed;
+  z-index: 30;
 }
 
 #navbar ul {
@@ -49,6 +54,8 @@ body {
 }
 
 #navbar ul li:hover {
+  padding-top: 10px;
+  height: 40px;
   cursor: pointer;
   background-color: var(--primary-color);
   color: #fff;
@@ -60,6 +67,7 @@ body {
 
 /* nested dropdown show */
 #navbar ul li:hover ul {
+  z-index: 10000;
   display: block;
   position: absolute;
   left: 0;
@@ -103,6 +111,9 @@ body {
   top: 0;
 } */
 /* HEADER */
+#showcase h1 {
+  z-index: 10;
+}
 #showcase {
   display: flex;
   flex-direction: column;
@@ -161,8 +172,9 @@ body {
   }
 
   100% {
-    color: rgba(52, 17, 208, 1);
-    /* color: rgba(51, 85, 4, 1); */
+    /* color: rgba(52, 17, 208, 1); */
+    color: #075a21f6;
+
     /* color: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), #f8073771); */
     /* background-image: linear-gradient(90deg, rgb(34, 4, 4), blue);
     background-clip: text; */

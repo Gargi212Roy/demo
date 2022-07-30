@@ -1,0 +1,249 @@
+:root {
+  --primary-color: rgba(62, 143, 12, 0.8);
+  --secondary-color: rgba(39, 111, 17, 0.353);
+  --hover-color1: rgba(25, 147, 18, 0.782);
+  --hover-color2: rgba(10, 85, 33, 0.304);
+  --border-color: rgba(6, 80, 2, 0.585);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+#navbar ul {
+  list-style: none;
+  z-index: 2;
+}
+
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* hide nested ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+}
+
+/* nested dropdown show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+  margin-left: -110px;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+
+  border-bottom: 1px dotted var(--secondary-color);
+}
+
+#navbar ul li:hover ul li a {
+  color: #333;
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+}
+
+#navbar ul li:hover ul li span i {
+  float: right;
+  color: #fff;
+  background-color: var(--hover-color1);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span i {
+  background-color: var(--hover-color2);
+}
+
+/* .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+} */
+/* HEADER */
+#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: url("./images/Description.png") no-repeat center center/cover;
+
+  position: relative;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-100deg, rgba(0, 0, 0, 0.2), #9ca016);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: animate1 0.75s forwards ease-in-out 0.75s;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+  }
+  /* 50% {
+    opacity: 1;
+  } */
+  100% {
+    opacity: 1;
+  }
+}
+
+.contentStyle {
+  font-family: "Archivo", sans-serif;
+  font-size: 150px;
+  font-weight: 1000;
+  color: rgba(229, 226, 36, 0.995);
+  text-shadow: 1.4rem 0.3rem 1rem rgb(14, 16, 14);
+
+  animation: animate2 1.5s forwards ease-in-out 0.8s;
+}
+
+@keyframes animate2 {
+  0% {
+    /* color: rgba(32, 39, 31, 0); */
+
+    color: rgba(229, 226, 36, 0.995);
+  }
+
+  100% {
+    color: rgba(52, 17, 208, 1);
+    /* color: rgba(51, 85, 4, 1); */
+    /* color: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), #f8073771); */
+    /* background-image: linear-gradient(90deg, rgb(34, 4, 4), blue);
+    background-clip: text; */
+    /* color: transparent; */
+    text-shadow: 0.4rem 0.3rem 0.4rem rgb(197, 210, 196);
+  }
+}
+/* FOOTER */
+
+.main-footer {
+  height: 210px;
+  background: url("./images/Description.png") no-repeat center center/cover;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.5rem;
+  padding: 0.5rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.main-footer::before {
+  content: "";
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), #eef200);
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.main-footer img {
+  padding: 0;
+  height: 5rem;
+  width: 9rem;
+}
+
+.partition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 3.5rem;
+
+  border-right: var(--border-color) solid 2.8px;
+  height: 80%;
+}
+
+.clr {
+  padding-left: 0.25rem;
+}
+
+.social i {
+  /* color: rgb(2, 40, 211); */
+  margin-right: 0.35rem;
+}
+
+.change1 {
+  color: rgb(153, 35, 74);
+}
+.change2 {
+  color: rgb(165, 28, 28);
+}
+
+.p2 img {
+  padding-top: 1rem;
+  margin-bottom: 0;
+  height: 11rem;
+  width: 11rem;
+}
+.p5 img {
+  width: 15rem;
+}
+.sponsor h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 40px;
+  padding-bottom: 1.5rem;
+  color: #075a21f6;
+}
+.part {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10rem;
+}

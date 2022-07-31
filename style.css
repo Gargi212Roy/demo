@@ -21,7 +21,7 @@ body {
 #navbar {
   font-family: "Encode Sans Semi Condensed", sans-serif;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -29,6 +29,18 @@ body {
   background-color: var(--secondary-color);
   position: fixed;
   z-index: 30;
+}
+h1 {
+  padding: 50px;
+}
+.head h1 {
+  font-family: "Archivo", sans-serif;
+  color: #e0e0e0;
+}
+.sub-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #navbar ul {
@@ -249,6 +261,7 @@ body {
   width: 15rem;
 }
 .sponsor h1 {
+  padding: 0;
   font-family: "Fira Sans", sans-serif;
   font-size: 40px;
   padding-bottom: 1.5rem;

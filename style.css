@@ -38,6 +38,7 @@ h1 {
   color: #e0e0e0;
 }
 .sub-head {
+  z-index: 300;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -79,12 +80,12 @@ h1 {
 
 /* nested dropdown show */
 #navbar ul li:hover ul {
-  z-index: 10000;
+  z-index: 1000000000;
   display: block;
   position: absolute;
   left: 0;
   width: 200px;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   margin-left: -110px;
 }
 
